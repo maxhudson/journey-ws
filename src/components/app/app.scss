@@ -1,0 +1,38 @@
+html {
+  font-size: 85%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body, html, #root {
+  height: 100%;
+}
+body {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+a, input, textarea, button {
+  &, &:-webkit-autofill {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+  }
+}
+a, button {
+  text-transform: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+.app {
+
+}
