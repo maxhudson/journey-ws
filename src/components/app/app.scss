@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Baskervville|Lato|Lora|Open+Sans|Playfair+Display|Roboto|Slabo+27px&display=swap');
+
 html {
   font-size: 85%;
 }
@@ -34,5 +36,166 @@ a {
 }
 
 .app {
+  height: 100%;
+}
 
+.slideshow {
+  height: 100%;
+  position: relative;
+
+  .footer {
+    height: 8rem;
+    border-top: 1px solid #f0f0f0;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+
+    .slideshow-buttons {
+      margin-bottom: 0.5rem;
+
+      .slideshow-button {
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 1rem;
+        vertical-align: top;
+        text-transform: lowercase;
+
+        &.active, &:hover {
+          font-weight: bold;
+        }
+
+        span {
+          opacity: 0.5;
+          font-weight: normal;
+          margin-left: 2px;
+          display: block;
+        }
+      }
+    }
+    .index-buttons {
+      .index-button {
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid black;
+        // background-color: #ccc;
+        margin: 0px 2px;
+        display: inline-block;
+        cursor: pointer;
+
+        &.active, &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+  .slides {
+    height: 100%;
+  }
+}
+.slide {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8rem;
+
+  .slide-text {
+    background-color: white;
+  }
+
+  &.layout-TlMr, &.layout-TrMl {
+    padding-top: 8rem;
+    justify-content: flex-end;
+
+    .slide-text, .media {
+      height: 100%;
+      width: 50%;
+    }
+    .slide-text {
+      width: 25rem;
+    }
+    .medium {
+      padding: 2rem;
+      height: 100%;
+      padding-left: 2rem;
+      // max-height: 40rem;
+      // width: 50%;
+
+      img, video {
+        object-fit: contain;
+        object-position: left center;
+      }
+    }
+  }
+  &.layout-TrMl {
+    flex-flow: row-reverse;
+    padding-top: 0;
+
+    .medium {
+      img, video {
+        object-position: right center !important;
+      }
+    }
+  }
+  &.layout-TtrMf {
+    position: relative;
+
+    .slide-text {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+    .medium {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+
+      img, video {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &.layout-TlMr, &.layout-TtrMf, &.layout-TrMl {
+
+    .medium {
+      img, video {
+        width: 100%;
+        height: 100%;
+        object-position: left center;
+      }
+    }
+  }
+}
+
+
+
+.slide-text {
+  padding: 2rem;
+  width: 25rem;
+
+  .text-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Baskervville', serif;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .text-body {
+    font-family: 'Lato';
+    letter-spacing: 1px;
+    white-space: pre-line;
+    line-height: 1.5;
+  }
 }
