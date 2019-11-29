@@ -1,6 +1,7 @@
 import React from 'react';
 
 var slideshow = {
+  id: 3,
   title: 'Duck',
   slides: [
     {

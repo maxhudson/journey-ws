@@ -35,6 +35,8 @@ a {
   text-decoration: none;
 }
 
+$footerHeight: 7rem;
+
 .app {
   height: 100%;
 }
@@ -43,10 +45,23 @@ a {
   height: 100%;
   position: relative;
 
+  &.is-transitioning {
+    .slides {
+      opacity: 0;
+      left: -20rem;
+    }
+  }
+
+  .slides {
+    position: relative;
+    left: 0px;
+    transition: opacity 0.5s, left 0.5s;
+  }
+
   .footer {
-    height: 8rem;
+    height: $footerHeight;
     border-top: 1px solid #f0f0f0;
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -54,17 +69,22 @@ a {
     background-color: white;
 
     .slideshow-buttons {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
 
       .slideshow-button {
         cursor: pointer;
         display: inline-block;
         margin-right: 1rem;
-        vertical-align: top;
+        vertical-align: baseline;
         text-transform: lowercase;
+        font-family: 'Baskervville', serif;
+        line-height: 1;
 
         &.active, &:hover {
           font-weight: bold;
+        }
+        &.active {
+          font-size: 1.5rem;
         }
 
         span {
@@ -94,60 +114,103 @@ a {
   .slides {
     height: 100%;
   }
+
+  .preload {
+    opacity: 0;
+    position: fixed;
+
+    & img {
+      width: 1px;
+      height: 1px;
+    }
+  }
 }
 .slide {
-  height: 100%;
+  height: calc(100% - #{$footerHeight});
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 8rem;
 
   .slide-text {
     background-color: white;
   }
 
-  &.layout-TlMr, &.layout-TrMl {
-    padding-top: 8rem;
-    justify-content: flex-end;
+  @media (min-width: 801px) {
+    &.layout-TlMr, &.layout-TrMl {
+      padding-top: 8rem;
+      justify-content: flex-end;
 
-    .slide-text, .media {
-      height: 100%;
-      width: 50%;
-    }
-    .slide-text {
-      width: 25rem;
-    }
-    .medium {
-      padding: 2rem;
-      height: 100%;
-      padding-left: 2rem;
-      // max-height: 40rem;
-      // width: 50%;
+      .slide-text, .media {
+        height: 100%;
+        width: 50%;
+      }
+      .slide-text {
+        width: 25rem;
+      }
+      .medium {
+        padding: 2rem;
+        height: 100%;
+        padding-left: 2rem;
+        // max-height: 40rem;
+        // width: 50%;
 
-      img, video {
-        object-fit: contain;
-        object-position: left center;
+        img, video {
+          object-fit: contain;
+          object-position: left center;
+        }
+      }
+    }
+    &.layout-TrMl {
+      flex-flow: row-reverse;
+      padding-top: 0;
+
+      .medium {
+        img, video {
+          object-position: right center !important;
+        }
+      }
+    }
+    &.layout-TtrMf {
+      position: relative;
+
+      .slide-text {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+      }
+      .medium {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+
+        img, video {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &.layout-TlMr, &.layout-TtrMf, &.layout-TrMl {
+      .medium {
+        img, video {
+          width: 100%;
+          height: 100%;
+          object-position: left center;
+        }
       }
     }
   }
-  &.layout-TrMl {
-    flex-flow: row-reverse;
-    padding-top: 0;
-
-    .medium {
-      img, video {
-        object-position: right center !important;
-      }
-    }
-  }
-  &.layout-TtrMf {
+  @media (max-width: 800px) {
     position: relative;
+    align-items: flex-start;
 
     .slide-text {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
+      margin: 1rem;
+      width: calc(100% - 2rem);
     }
     .medium {
       width: 100%;
@@ -158,19 +221,10 @@ a {
       z-index: -1;
 
       img, video {
-        object-fit: cover;
-        object-position: center;
-      }
-    }
-  }
-
-  &.layout-TlMr, &.layout-TtrMf, &.layout-TrMl {
-
-    .medium {
-      img, video {
         width: 100%;
         height: 100%;
-        object-position: left center;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
