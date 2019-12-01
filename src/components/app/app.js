@@ -2,27 +2,35 @@ import {_, Component, React, className} from '@symbolic/react-app'; //eslint-dis
 import './app.scss';
 import max20191125 from 'slideshows/2019-11-25-max';
 import max20191128 from 'slideshows/2019-11-28-max';
+import artDec19 from 'slideshows/2019-dec-art';
 import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import {Link, BrowserRouter, Route} from 'react-router-dom';
 
-var slideshows = _.keyBy([max20191125, max20191128/*, anthony20191125*/], 'id');
+var slideshows = _.keyBy([max20191125, max20191128, artDec19/*, anthony20191125*/], 'id');
 
-var srcForFilename = (filename) => `https://maxhudson-website.s3.amazonaws.com/journey-ws/${filename}`;
+_.forEach(slideshows, slideshow => {
+  var {path} = slideshow;
+
+  _.forEach(slideshow.slides, slide => {
+    _.forEach(slide.media, medium => {
+      medium.src = `https://maxhudson-website.s3.amazonaws.com/journey-ws/${path ? path + '/' : ''}${medium.filename}`;
+    });
+  });
+});
+
 
 //TODO
 //better media hosting (imgur?)
 //better index
 
 var Medium = ({medium}) => {
-  var src = srcForFilename(medium.filename);
-
   return (
     <div className='medium'>
       {medium.type === 'image' ? (
-        <img src={src}/>
+        <img src={medium.src}/>
       ) : (
         <video loop autoPlay muted playsInline>
-          <source type='video/mp4' src={src}/>
+          <source type='video/mp4' src={medium.src}/>
         </video>
       )}
     </div>
@@ -82,7 +90,7 @@ class Slideshow extends Component {
     var slideshow = _.get(slideshows, _.get(this.state, 'id'), _.first(_.values(slideshows)));
     var activeSlideshow = slideshow;
     var {slides} = slideshow;
-    var imageSrcs = _.map(_.filter(_.map(slides, 'media.0'), medium => medium && medium.type === 'image'), medium => srcForFilename(medium.filename));
+    var imageSrcs = _.map(_.filter(_.map(slides, 'media.0'), medium => medium && medium.type === 'image'), 'src');
 
     return (
       <div {...className(['slideshow', this.state.isTransitioning && 'is-transitioning'])}>

@@ -12,22 +12,22 @@ var slideshow = {
     },
     {
       layout: 'TtrMf',
-      text: {title: 'Anxiety', body: 'vibrating harshness\nanalyze, judge, repeat\nsweaty feet and hands\nawkward clunkiness\nneurotic attempts to fix'},
+      text: {title: 'Anxiety', body: 'vibrating harshness\nanalyze, judge, repeat\nsweaty feet and hands\nawkward clunkiness\nneurotic fixation'},
       media: [{type: 'video', filename: '2019-11-25-lake.mp4'}]
     },
     {
       layout: 'TrMl',
-      text: {title: 'Separation', body: <>wanting distraction<br />polarized eye contact<br />annoyance, impatience<br />stiffness in the face<br /><i>lack of humor</i></>},
+      text: {title: 'Separation', body: <>boredom<br />polarized eye contact<br />impatience<br />stiffness in the face<br /><i>lack of humor</i></>},
       media: [{type: 'image', filename: '2019-11-25-stump-pads.jpg'}]
     },
     {
       layout: 'TtrMf',
-      text: {title: 'Ego', body: `serious, important\nlacking perspective\nalmost beautiful`},
+      text: {title: 'Ego', body: `serious\nimportant\nlacking perspective\nalmost beautiful`},
       media: [{type: 'image', filename: '2019-11-25-roots.jpg'}]
     },
     {
       layout: 'TlMr',
-      text: {title: 'Love', body: <>no questions<br />pre-sense connection<br />warm<br/>glowing<br />light</>},
+      text: {title: 'Love', body: <>pre-sense<br />warm<br/>glowing<br />light</>},
       media: [{type: 'image', filename: '2019-11-25-wood-flow.jpg'}]
     }
   ]
