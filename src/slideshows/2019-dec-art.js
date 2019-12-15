@@ -2,13 +2,13 @@ import React from 'react';
 
 var slideshow = {
   id: 3,
-  title: '?',
+  title: 'december',
   author: 'Max',
   path: '2019-dec-art',
   slides: [
     {
       layout: 'TlMr',
-      text: {title: 'Communication', body: `manipulation\n\nvs.\n\nshared awareness`},
+      text: {title: 'Communication', body: `manipulation\ngossip\n\nvs.\n\nshared awareness\nsolidarity`},
       media: [{type: 'image', filename: 'bird-52.png'}]
     },
     {
@@ -23,6 +23,31 @@ Then a leaky faucet
 On and off
 But always slowly dripping`},
       media: [{type: 'image', filename: 'helen.png'}]
+    },
+    {
+      layout: 'TrMl',
+      text: {title: ``},
+      media: [{type: 'image', filename: 'tree-rock.png'}]
+    },
+    {
+      layout: 'TlMr',
+      text: {title: ``},
+      media: [{type: 'image', filename: 'man-moon.jpg'}]
+    },
+    {
+      layout: 'TlMr',
+      text: {title: ``},
+      media: [{type: 'image', filename: 'conception.png'}]
+    },
+    {
+      layout: 'TlMr',
+      text: {title: ``},
+      media: [{type: 'image', filename: 'green-math.png'}]
+    },
+    {
+      layout: 'TlMr',
+      text: {title: ``},
+      media: [{type: 'image', filename: 'cacti-02-01.png'}]
     }
   ]
 };

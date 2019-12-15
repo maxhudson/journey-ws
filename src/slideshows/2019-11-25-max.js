@@ -2,7 +2,7 @@ import React from 'react';
 
 var slideshow = {
   id: 1,
-  title: 'Qualities',
+  title: 'Quality',
   author: 'Max',
   slides: [
     {

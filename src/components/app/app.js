@@ -3,10 +3,11 @@ import './app.scss';
 import max20191125 from 'slideshows/2019-11-25-max';
 import max20191128 from 'slideshows/2019-11-28-max';
 import artDec19 from 'slideshows/2019-dec-art';
+import whiteArt from 'slideshows/white-art';
 import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import {Link, BrowserRouter, Route} from 'react-router-dom';
 
-var slideshows = _.keyBy([max20191125, max20191128, artDec19/*, anthony20191125*/], 'id');
+var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt/*, anthony20191125*/], 'id');
 
 _.forEach(slideshows, slideshow => {
   var {path} = slideshow;

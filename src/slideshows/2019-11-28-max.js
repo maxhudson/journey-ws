@@ -2,7 +2,7 @@ import React from 'react';
 
 var slideshow = {
   id: 2,
-  title: 'Life, decay',
+  title: 'retreat',
   author: 'Max',
   slides: [
     {
