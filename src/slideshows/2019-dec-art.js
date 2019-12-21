@@ -25,27 +25,27 @@ But always slowly dripping`},
       media: [{type: 'image', filename: 'helen.png'}]
     },
     {
-      layout: 'TrMl',
+      layout: 'Ml',
       text: {title: ``},
       media: [{type: 'image', filename: 'tree-rock.png'}]
     },
     {
-      layout: 'TlMr',
+      layout: 'Mr',
       text: {title: ``},
       media: [{type: 'image', filename: 'man-moon.jpg'}]
     },
     {
-      layout: 'TlMr',
+      layout: 'Ml',
       text: {title: ``},
       media: [{type: 'image', filename: 'conception.png'}]
     },
     {
-      layout: 'TlMr',
+      layout: 'Ml',
       text: {title: ``},
       media: [{type: 'image', filename: 'green-math.png'}]
     },
     {
-      layout: 'TlMr',
+      layout: 'Mr',
       text: {title: ``},
       media: [{type: 'image', filename: 'cacti-02-01.png'}]
     }
