@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-$footerHeight: 7rem;
+$footerHeight: 5.5rem;
 
 .app {
   height: 100%;
@@ -61,7 +61,7 @@ $footerHeight: 7rem;
   .footer {
     height: $footerHeight;
     border-top: 1px solid #f0f0f0;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -260,5 +260,59 @@ $footerHeight: 7rem;
     letter-spacing: 1px;
     white-space: pre-line;
     line-height: 1.5;
+  }
+}
+
+.main-index {
+  .slideshows {
+    display: flex;
+    // max-width: 40rem;
+    flex-wrap: wrap;
+    // justify-content: center;
+    margin: 0.5rem;
+
+    .slideshow {
+      // padding: 1rem;
+      border: 1px solid #000;
+      text-transform: lowercase;
+      margin: 0.5rem;
+      // box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+
+      &, .slideshow-title {
+        border-bottom-left-radius: 0.2vw;
+        border-bottom-right-radius: 2em;
+      }
+
+      @media (min-device-width: 720px) {
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .thumbnail {
+        background-size: cover;
+        background-position: center;
+
+        @media (max-width: 720px) {
+          width: calc(100vw - 2rem);
+          height: 65vw;
+          font-size: 3vw;
+        }
+        @media (min-width: 721px) {
+          width: calc(25vw - 1.75rem);
+          height: calc(18vw - 1rem);
+          font-size: 1vw;
+        }
+      }
+
+      .slideshow-title {
+        transition: opacity 0.3s;
+        font-size: 1em;
+        color: white;
+        padding: 1em;
+        height: 16%;
+        background-color: black;
+      }
+    }
   }
 }

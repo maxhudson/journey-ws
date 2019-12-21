@@ -5,9 +5,9 @@ import max20191128 from 'slideshows/2019-11-28-max';
 import artDec19 from 'slideshows/2019-dec-art';
 import whiteArt from 'slideshows/white-art';
 import lenaLake from 'slideshows/lena-lake';
-import anthony20191125 from 'slideshows/2019-11-25-anthony';
+// import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import yard from 'slideshows/yard';
-import {Link, BrowserRouter, Route} from 'react-router-dom';
+import {Link, Switch, BrowserRouter, Route} from 'react-router-dom';
 
 var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt, yard, lenaLake/*, anthony20191125*/], 'id');
 
@@ -30,7 +30,7 @@ var Medium = ({medium}) => {
   return (
     <div className='medium'>
       {medium.type === 'image' ? (
-        <img src={medium.src}/>
+        <img src={medium.src} alt=''/>
       ) : (
         <video loop autoPlay muted playsInline>
           <source type='video/mp4' src={medium.src}/>
@@ -104,14 +104,9 @@ class Slideshow extends Component {
           <Slide slide={slides[this.state.activeSlideIndex]}/>
         </div>
         <div className='footer'>
-          <div className='slideshow-buttons'>
-            {_.map(slideshows, (slideshow) => (
-              <Link
-                key={slideshow.id}
-                {...className(['slideshow-button', slideshow.id === activeSlideshow.id && 'active'])}
-                to={`/slideshows/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
-              >{slideshow.title}<span>{/*slideshow.author*/}</span></Link>
-            ))}
+          <div style={{display: 'flex', marginBottom: '1rem', textTransform: 'lowercase'}}>
+            <Link style={{paddingRight: '1rem'}} to='/'>←</Link>
+            {activeSlideshow.title}
           </div>
           <div className='index-buttons'>
             {_.map(slides, (slide, index) => (
@@ -128,12 +123,40 @@ class Slideshow extends Component {
   }
 }
 
+class Index extends Component {
+  render() {
+    return (
+      <div className='main-index'>
+        <div className='slideshows'>
+          {_.map(slideshows, (slideshow) => {
+            var mediaUrl = _.get(slideshow, 'slides.0.media.0.src');
+
+            return (
+              <Link
+                key={slideshow.id}
+                {...className(['slideshow'])}
+                to={`/slideshows/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
+              >
+                <div className='thumbnail' style={{backgroundImage: `url(${mediaUrl})`}}/>
+                <div className='slideshow-title'>{slideshow.title}</div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    )
+  }
+}
+
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className='app'>
-          <Route path={['/slideshows/:id/:slug?', '', '/']} component={Slideshow}/>
+          <Switch>
+            <Route path={['/slideshows/:id/:slug?']} exact component={Slideshow}/>
+            <Route path={['/', '']} component={Index}/>
+          </Switch>
         </div>
       </BrowserRouter>
     );
