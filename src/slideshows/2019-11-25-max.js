@@ -12,7 +12,7 @@ var slideshow = {
     },
     {
       layout: 'TtrMf',
-      text: {title: 'Anxiety', body: 'vibrating harshness\nanalyze, judge, repeat\nsweaty feet and hands\nawkward clunkiness\nneurotic fixation'},
+      text: {title: 'Anxiety', body: 'harsh vibration\nanalyze, judge, repeat\nsweaty feet and hands\nawkward clunkiness\nneurotic fixation'},
       media: [{type: 'video', filename: '2019-11-25-lake.mp4'}]
     },
     {

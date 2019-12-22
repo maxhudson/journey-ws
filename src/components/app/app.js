@@ -127,15 +127,23 @@ class Index extends Component {
   render() {
     return (
       <div className='main-index'>
+        <div className='index-header'>
+          <div className='logo'>
+            <img src={`https://maxhudson-website.s3.amazonaws.com/journey-ws/logo-01.png`} alt=''/>
+          </div>
+          <div className='info'>
+            <a href="mailto:maxhud26@gmail.com">maxhud26@gmail.com</a>
+          </div>
+        </div>
         <div className='slideshows'>
-          {_.map(slideshows, (slideshow) => {
+          {_.map(_.reverse([..._.values(slideshows)]), (slideshow) => {
             var mediaUrl = _.get(slideshow, 'slides.0.media.0.src');
 
             return (
               <Link
                 key={slideshow.id}
                 {...className(['slideshow'])}
-                to={`/slideshows/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
+                to={`/s/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
               >
                 <div className='thumbnail' style={{backgroundImage: `url(${mediaUrl})`}}/>
                 <div className='slideshow-title'>{slideshow.title}</div>
@@ -154,7 +162,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div className='app'>
           <Switch>
-            <Route path={['/slideshows/:id/:slug?']} exact component={Slideshow}/>
+            <Route path={['/s/:id/:slug?']} exact component={Slideshow}/>
             <Route path={['/', '']} component={Index}/>
           </Switch>
         </div>
