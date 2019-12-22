@@ -113,9 +113,9 @@ class Slideshow extends Component {
           <Slide slide={slides[this.state.activeSlideIndex]}/>
         </div>
         <div className='footer'>
-          <div style={{display: 'flex', alignItems: 'center', fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'lowercase'}}>
-            <Link style={{paddingRight: '1rem'}} to='/'>←</Link>
-            <span style={{position: 'relative', top: '-2px'}}>{activeSlideshow.title}</span>
+          <div style={{display: 'flex', fontSize: '1.5rem', marginBottom: '1rem', textTransform: 'lowercase'}}>
+            <Link style={{fontWeight: 'normal', paddingRight: '1rem', fontSize: '1.2rem', lineHeight: '2.2rem'}} to='/'>back</Link>
+            <span style={{}}>{activeSlideshow.title}</span>
           </div>
           <div className='index-buttons'>
             {_.map(slides, (slide, index) => (
