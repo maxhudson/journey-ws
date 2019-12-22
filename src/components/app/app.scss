@@ -230,6 +230,11 @@ $footerHeight: 6.8rem;
         }
       }
     }
+    &.layout-Ml, &.layout-Mr {
+      .slide-text {
+        display: none;
+      }
+    }
 
     .slide-text {
       margin: 1rem;
@@ -292,7 +297,6 @@ $footerHeight: 6.8rem;
   }
   .index-header {
     padding: 1rem;
-    padding-bottom: 3rem;
     filter: invert(100%);
 
     .logo, .info {
@@ -301,12 +305,16 @@ $footerHeight: 6.8rem;
     .logo {
       img {
         width: 10rem;
+        display: block;
+        margin: auto;
       }
     }
     .info {
       font-family: 'Baskervville', serif;
       font-size: 1.1rem;
       opacity: 0.8;
+      display: none;
+      padding-bottom: 3rem;
     }
   }
   .slideshows {

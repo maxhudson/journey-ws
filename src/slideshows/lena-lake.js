@@ -2,7 +2,7 @@
 
 var slideshow = {
   id: 6,
-  title: 'lena.lake',
+  title: 'lena . lake',
   author: 'Max',
   path: 'lena-lake',
   slides: [

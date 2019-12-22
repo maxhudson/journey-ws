@@ -145,7 +145,7 @@ class Index extends Component {
           </div>
         </div>
         <div className='slideshows'>
-          {_.map(_.reverse(_.reverse([..._.values(slideshows)])), (slideshow) => {
+          {_.map(_.reverse([..._.values(slideshows)]), (slideshow) => {
             var mediaUrl = _.get(slideshow, 'slides.0.media.0.src');
 
             return (
