@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-$footerHeight: 6rem;
+$footerHeight: 6.8rem;
 
 .app {
   height: 100%;
@@ -67,6 +67,8 @@ $footerHeight: 6rem;
     left: 0px;
     width: 100%;
     background-color: white;
+    font-family: 'Baskervville', serif;
+    font-weight: bold;
 
     .slideshow-buttons {
       margin-bottom: 1rem;
