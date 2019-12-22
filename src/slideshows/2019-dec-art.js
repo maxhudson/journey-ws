@@ -8,7 +8,7 @@ var slideshow = {
   slides: [
     {
       layout: 'TlMr',
-      text: {title: 'Communication', body: `manipulation\ngossip\n\nvs.\n\nshared awareness\nsolidarity`},
+      text: {title: 'Communication', body: `manipulation\ngossip\n\nv.\n\nshared awareness\nsolidarity`},
       media: [{type: 'image', filename: 'bird-52.png'}]
     },
     {

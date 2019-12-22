@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-$footerHeight: 5.5rem;
+$footerHeight: 6rem;
 
 .app {
   height: 100%;
@@ -97,8 +97,8 @@ $footerHeight: 5.5rem;
     }
     .index-buttons {
       .index-button {
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
         border: 1px solid black;
         // background-color: #ccc;
         margin: 0px 2px;
@@ -127,10 +127,15 @@ $footerHeight: 5.5rem;
 }
 .slide {
   height: calc(100% - #{$footerHeight});
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.mode-minimal {
+    .slide-text {
+      display: none;
+    }
+  }
 
   .slide-text {
     background-color: white;
@@ -188,8 +193,8 @@ $footerHeight: 5.5rem;
         z-index: -1;
 
         img, video {
-          object-fit: cover;
           object-position: center;
+          object-fit: cover;
         }
       }
     }
@@ -215,6 +220,14 @@ $footerHeight: 5.5rem;
   @media (max-width: 800px) {
     position: relative;
     align-items: flex-start;
+
+    &.mode-minimal {
+      .medium {
+        img, video {
+          object-fit: contain;
+        }
+      }
+    }
 
     .slide-text {
       margin: 1rem;
@@ -265,18 +278,19 @@ $footerHeight: 5.5rem;
 
 .main-index {
   // background-color: gray;
-  height: 100%;
-  overflow: auto;
+  min-height: 100%;
+  padding-bottom: 6rem;
+  // overflow: auto;
   background-color: #eee;
   // padding: 1rem;
 
   .index-header, .slideshow {
-    padding: 1rem;
     background-color: #ffffff;
     margin-bottom: 1rem;
   }
   .index-header {
     padding-bottom: 3rem;
+      padding: 1rem;
     filter: invert(100%);
 
     .logo, .info {
@@ -355,14 +369,16 @@ $footerHeight: 5.5rem;
         transition: opacity 0.3s;
         font-size: 1.5em;
         // color: white;
-        padding-top: 0.6rem;
+        padding-top: 0.8rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
         // text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
         font-weight: bold;
         // height: 16%;
         // background-color: rgba(0, 0, 0, 0.2);
         font-family: 'Baskervville', serif;
-        margin-top: 1rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        // margin-top: 1rem;
+        // border-top: 1px solid rgba(0, 0, 0, 0.05);
         // bottom: 0px;
         // right: 0px;
       }

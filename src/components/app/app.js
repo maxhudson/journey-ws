@@ -50,18 +50,27 @@ var SlideText = ({text}) => {
   )
 }
 
-var Slide = ({slide}) => {
+class Slide extends Component {
+  state = {mode: 'default'}
 
-  return (
-    <div {...className(['slide', `layout-${slide.layout}`])}>
-      <SlideText text={slide.text}/>
-      <div className='media'>
-        {_.map(slide.media, (medium) => (
-          <Medium key={JSON.stringify(medium)} {...{medium}} />
-        ))}
+  handleClick = (event) => {
+    this.setState({mode: this.state.mode === 'default' ? 'minimal' : 'default'});
+  }
+
+  render() {
+    var {slide} = this.props;
+
+    return (
+      <div {...className(['slide', `layout-${slide.layout}`, `mode-${this.state.mode}`])} onClick={this.handleClick}>
+        <SlideText text={slide.text}/>
+        <div className='media'>
+          {_.map(slide.media, (medium) => (
+            <Medium key={JSON.stringify(medium)} {...{medium}} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 class Slideshow extends Component {
@@ -104,8 +113,8 @@ class Slideshow extends Component {
           <Slide slide={slides[this.state.activeSlideIndex]}/>
         </div>
         <div className='footer'>
-          <div style={{display: 'flex', marginBottom: '1rem', textTransform: 'lowercase'}}>
-            <Link style={{paddingRight: '1rem'}} to='/'>←</Link>
+          <div style={{display: 'flex', alignItems: 'center', lineHeight: '1.3rem', marginBottom: '1rem', textTransform: 'lowercase'}}>
+            <Link style={{paddingRight: '1rem', fontSize: '1.5rem'}} to='/'>←</Link>
             {activeSlideshow.title}
           </div>
           <div className='index-buttons'>
@@ -136,7 +145,7 @@ class Index extends Component {
           </div>
         </div>
         <div className='slideshows'>
-          {_.map(_.reverse([..._.values(slideshows)]), (slideshow) => {
+          {_.map(_.reverse(_.reverse([..._.values(slideshows)])), (slideshow) => {
             var mediaUrl = _.get(slideshow, 'slides.0.media.0.src');
 
             return (
