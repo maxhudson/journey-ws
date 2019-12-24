@@ -81,10 +81,12 @@ class Slideshow extends Component {
     this.setState({id: _.get(this.props, 'match.params.id')});
 
     document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('keydown', this.handleWindowScroll);
   }
 
   componentDidUnmount() {
-    document.addEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keydown', this.handleWindowScroll);
   }
 
   componentDidUpdate(prevProps) {
@@ -107,19 +109,25 @@ class Slideshow extends Component {
 
   toggleIsFullscreen = () => this.setState(({isFullscreen}) => ({isFullscreen: !isFullscreen}));
 
-  next = () => this.setIndex(this.state.index + 1)
-  prev = () => this.setIndex(this.state.index - 1)
+  next = (event) => this.setIndex(this.state.index + 1, event);
+  prev = (event) => this.setIndex(this.state.index - 1, event);
 
-  setIndex = (index) => {
+  setIndex = (index, event) => {
     var {slides} = this.slideshow;
     var count = slides.length;
 
     this.setState({index: (index + count) % count});
+
+    if (event) event.preventDefault();
   }
 
   handleKeyDown = (event) => {
-    if (event.keyCode === 39) this.next();
-    if (event.keyCode === 37) this.prev();
+    if (event.keyCode === 39) this.next(event);
+    if (event.keyCode === 37) this.prev(event);
+  }
+
+  handleWindowScroll = (event) => {
+    event.preventDefault();
   }
 
   get slideshow() {
@@ -137,6 +145,7 @@ class Slideshow extends Component {
         {...className(['slideshow', this.state.isTransitioning && '--is-transitioning'])}
         onSwipedLeft={this.next}
         onSwipedRight={this.prev}
+        delta={3}
       >
         <div className='preload'>
           {_.map(imageSrcs, src => <img key={src} alt='' {...{src}} />)}
