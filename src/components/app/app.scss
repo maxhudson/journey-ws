@@ -50,11 +50,6 @@ $footerHeight: 7.2rem;
   background-color: #f0f0f0;
 }
 
-
-//box-shadow
-$boxShadow: 0px 0px 5px rgba(0,0,0,0.05);
-.slideshow { .footer,  { box-shadow: $boxShadow; } }
-
 .slideshow {
   height: 100%;
   position: relative;
