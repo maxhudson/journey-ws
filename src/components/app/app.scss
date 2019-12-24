@@ -55,12 +55,12 @@ $footerHeight: 7.2rem;
   position: relative;
   user-select: none;
 
-  &.is-transitioning {
-    .slides {
-      opacity: 0;
-      left: -20rem;
-    }
-  }
+  // &.is-transitioning {
+  //   .slides {
+  //     opacity: 0;
+  //     left: -20rem;
+  //   }
+  // }
 
   .slides {
     position: relative;
@@ -209,8 +209,6 @@ $footerHeight: 7.2rem;
         padding: 2rem;
         height: 100%;
         padding-left: 2rem;
-        // max-height: 40rem;
-        // width: 50%;
 
         img, video {
           object-fit: contain;
