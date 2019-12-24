@@ -135,8 +135,8 @@ class Slideshow extends Component {
     return (
       <Swipeable
         {...className(['slideshow', this.state.isTransitioning && '--is-transitioning'])}
-        onSwipedLeft={this.prev}
-        onSwipedRight={this.next}
+        onSwipedLeft={this.next}
+        onSwipedRight={this.prev}
       >
         <div className='preload'>
           {_.map(imageSrcs, src => <img key={src} alt='' {...{src}} />)}
