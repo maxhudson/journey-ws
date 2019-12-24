@@ -138,8 +138,14 @@ $footerHeight: 7.2rem;
         display: inline-block;
         cursor: pointer;
 
-        &.active, &:hover {
+        &.active {
           background-color: black;
+        }
+
+        @media (min-device-width: 721px) {
+          &:hover {
+            background-color: black;
+          }
         }
       }
     }
