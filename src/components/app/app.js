@@ -135,8 +135,9 @@ class Slideshow extends Component {
     return (
       <Swipeable
         {...className(['slideshow', this.state.isTransitioning && '--is-transitioning'])}
-        // onSwipedLeft={this.next}
-        // onSwipedRight={this.prev}
+        preventDefaultTouchmoveEvent
+        onSwipedLeft={this.next}
+        onSwipedRight={this.prev}
         delta={3}
       >
         <div className='preload'>
