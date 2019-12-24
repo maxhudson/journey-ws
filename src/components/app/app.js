@@ -12,7 +12,7 @@ import yard from 'slideshows/yard';
 import {Link, Switch, BrowserRouter, Route} from 'react-router-dom';
 import Header from 'components/header/header';
 import InfoPage from 'components/pages/info/info-page.js';
-import {Swipeable} from 'react-swipeable'
+import {Swipeable} from 'react-swipeable';
 
 var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt, yard, lenaLake, man, tiger/*, anthony20191125*/], 'id');
 
@@ -100,8 +100,8 @@ class Slideshow extends Component {
       setTimeout(() => {
         fn();
 
-        setTimeout(() => this.setState({isTransitioning: false}), 100);
-      }, 500);
+        setTimeout(() => this.setState({isTransitioning: false}), 0);
+      }, 0);
     })
   }
 
@@ -134,7 +134,7 @@ class Slideshow extends Component {
 
     return (
       <Swipeable
-        {...className(['slideshow', this.state.isTransitioning && 'is-transitioning'])}
+        {...className(['slideshow', this.state.isTransitioning && '--is-transitioning'])}
         onSwipedLeft={this.prev}
         onSwipedRight={this.next}
       >
@@ -185,7 +185,7 @@ class Index extends Component {
                 key={slideshow.id}
                 {...className(['slideshow'])}
                 to={`/s/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
-                style={{transitionDelay: `${1 + 0.2 * index}s`}}
+                style={{transitionDelay: `${0.5 + 0 * index}s`}}
               >
                 <div className='thumbnail' style={{backgroundImage: `url(${mediaUrl})`}}/>
                 <div className='slideshow-title'>{slideshow.title}</div>

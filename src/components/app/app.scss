@@ -47,7 +47,13 @@ $footerHeight: 7.2rem;
 
 .app {
   height: 100%;
+  background-color: #f0f0f0;
 }
+
+
+//box-shadow
+$boxShadow: 0px 0px 5px rgba(0,0,0,0.05);
+.slideshow { .footer,  { box-shadow: $boxShadow; } }
 
 .slideshow {
   height: 100%;
@@ -174,9 +180,11 @@ $footerHeight: 7.2rem;
         padding: 0 !important;
       }
 
-      img, video {
-        object-fit: contain !important;
-        object-position: center !important;
+      .medium {
+        img, video {
+          object-fit: contain !important;
+          object-position: center !important;
+        }
       }
     }
   }
@@ -189,13 +197,17 @@ $footerHeight: 7.2rem;
     &.layout-TlMr, &.layout-TrMl, &.layout-Ml, &.layout-Mr {
       padding-top: 8rem;
       justify-content: flex-end;
+      align-items: flex-start;
 
       .slide-text, .media {
-        height: 100%;
         width: 50%;
+      }
+      .media {
+        height: 100%;
       }
       .slide-text {
         width: 25rem;
+        margin: 2rem 0;
       }
       .medium {
         padding: 2rem;
@@ -321,12 +333,11 @@ $footerHeight: 7.2rem;
 .main-index {
   min-height: 100%;
   padding-bottom: 6rem;
-  background-color: #eee;
 
   &:not(.is-loaded) {
-    .header {
-      opacity: 0;
-    }
+    // .header {
+    //   opacity: 0;
+    // }
     .slideshows .slideshow {
       left: -15rem;
       opacity: 0;
@@ -359,8 +370,6 @@ $footerHeight: 7.2rem;
 
       @media (min-device-width: 720px) {
         &:hover {
-          opacity: 0.8;
-
           .slideshow-title {
             text-decoration: underline;
           }
