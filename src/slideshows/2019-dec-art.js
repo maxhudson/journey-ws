@@ -1,14 +1,14 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 3,
+  id: 0,
   title: 'december',
   author: 'Max',
   path: '2019-dec-art',
   slides: [
     {
-      layout: 'TlMr',
-      text: {title: 'Communication', body: `manipulation\ngossip\n\nv.\n\nshared awareness\nsolidarity`},
+      layout: 'Mr',
+      text: {title: ``},
       media: [{type: 'image', filename: 'bird-52.png'}]
     },
     {
