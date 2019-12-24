@@ -1,0 +1,33 @@
+.header {
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  filter: invert(100%);
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+
+  .logo, .info {
+    text-align: center;
+  }
+  .logo {
+    display: block;
+
+    img {
+      width: 10rem;
+      display: block;
+      margin: auto;
+    }
+  }
+  .info {
+    font-family: 'Baskervville', serif;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    padding-bottom: 2rem;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
