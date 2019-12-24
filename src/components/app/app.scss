@@ -58,6 +58,7 @@ $boxShadow: 0px 0px 5px rgba(0,0,0,0.05);
 .slideshow {
   height: 100%;
   position: relative;
+  user-select: none;
 
   &.is-transitioning {
     .slides {
