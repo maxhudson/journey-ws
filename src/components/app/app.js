@@ -8,6 +8,7 @@ import lenaLake from 'slideshows/lena-lake';
 import man from 'slideshows/man';
 import tiger from 'slideshows/tiger';
 import chores from 'slideshows/9-chores';
+import isness from 'slideshows/10-isness';
 
 // import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import yard from 'slideshows/yard';
@@ -16,7 +17,7 @@ import Header from 'components/header/header';
 import InfoPage from 'components/pages/info/info-page.js';
 import {Swipeable} from 'react-swipeable';
 
-var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt, yard, lenaLake, man, tiger, chores/*, anthony20191125*/], 'id');
+var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt, yard, lenaLake, man, tiger, chores, isness/*, anthony20191125*/], 'id');
 
 _.forEach(slideshows, slideshow => {
   var {path} = slideshow;
@@ -50,7 +51,7 @@ var Medium = ({medium}) => {
 var SlideText = ({text}) => {
   return (
     <div className='slide-text'>
-      <div className='text-title'>{text.title}</div>
+      {text.title && (<div className='text-title'>{text.title}</div>)}
       <div className='text-subtitle'></div>
       <div className='text-body'>{text.body}</div>
     </div>
