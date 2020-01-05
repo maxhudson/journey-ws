@@ -15,16 +15,16 @@ var slideshow = {
       text: {title: '', body: ``},
       media: [{type: 'image', filename: 'sea-2.jpg'}]
     },
-    {
-      layout: 'Ml',
-      text: {title: '', body: ``},
-      media: [{type: 'video', filename: 'sea-3.mp4'}]
-    },
-    {
-      layout: 'Ml',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'sea-4.jpg'}]
-    },
+    // {
+    //   layout: 'Ml',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'video', filename: 'sea-3.mp4'}]
+    // },
+    // {
+    //   layout: 'Ml',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'image', filename: 'sea-4.jpg'}]
+    // },
     {
       layout: 'Ml',
       text: {title: '', body: ``},
@@ -40,11 +40,11 @@ var slideshow = {
       text: {title: '', body: ``},
       media: [{type: 'video', filename: 'sea-7.mp4'}]
     },
-    {
-      layout: 'Ml',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'sea-8.jpg'}]
-    },
+    // {
+    //   layout: 'Ml',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'image', filename: 'sea-8.jpg'}]
+    // },
   ]
 };
 
