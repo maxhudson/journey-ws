@@ -1,9 +1,8 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 0,
   title: 'december',
-  author: 'Max',
+  key: 'december',
   path: '2019-dec-art',
   slides: [
     {

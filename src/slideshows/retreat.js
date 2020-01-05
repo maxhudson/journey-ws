@@ -1,9 +1,8 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 2,
   title: 'retreat',
-  author: 'Max',
+  key: 'retreat',
   slides: [
     {
       layout: 'TtrMf',

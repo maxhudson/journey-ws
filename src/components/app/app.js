@@ -1,14 +1,15 @@
 import {_, Component, React, className} from '@symbolic/react-app'; //eslint-disable-line
 import './app.scss';
-import max20191125 from 'slideshows/2019-11-25-max';
-import max20191128 from 'slideshows/2019-11-28-max';
-import artDec19 from 'slideshows/2019-dec-art';
-import whiteArt from 'slideshows/white-art';
+import qualities from 'slideshows/qualities';
+import retreat from 'slideshows/retreat';
+import december from 'slideshows/december';
+import white from 'slideshows/white';
 import lenaLake from 'slideshows/lena-lake';
 import man from 'slideshows/man';
 import tiger from 'slideshows/tiger';
-import chores from 'slideshows/9-chores';
-import isness from 'slideshows/10-isness';
+import chores from 'slideshows/chores';
+import isness from 'slideshows/isness';
+import sea from 'slideshows/sea';
 
 // import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import yard from 'slideshows/yard';
@@ -17,7 +18,12 @@ import Header from 'components/header/header';
 import InfoPage from 'components/pages/info/info-page.js';
 import {Swipeable} from 'react-swipeable';
 
-var slideshows = _.keyBy([max20191125, max20191128, artDec19, whiteArt, yard, lenaLake, man, tiger, chores, isness/*, anthony20191125*/], 'id');
+var slideshows = [
+  qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
+  sea
+];
+
+var slideshowsByKey = _.keyBy(slideshows, 'key');
 
 _.forEach(slideshows, slideshow => {
   var {path} = slideshow;
@@ -81,7 +87,7 @@ class Slideshow extends Component {
   state = {index: 0, isFullscreen: false};
 
   componentDidMount() {
-    this.setState({id: _.get(this.props, 'match.params.id')});
+    this.setState({key: _.get(this.props, 'match.params.key')});
 
     document.addEventListener('keydown', this.handleKeyDown);
   }
@@ -91,10 +97,10 @@ class Slideshow extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (_.get(prevProps, 'match.params.id') !== _.get(this.props, 'match.params.id')) {
-      var id = _.get(this.props, 'match.params.id');
+    if (_.get(prevProps, 'match.params.key') !== _.get(this.props, 'match.params.key')) {
+      var key = _.get(this.props, 'match.params.key');
 
-      this.transitionSlide(() => this.setState({index: 0, id}));
+      this.transitionSlide(() => this.setState({index: 0, key}));
     }
   }
 
@@ -126,7 +132,7 @@ class Slideshow extends Component {
   }
 
   get slideshow() {
-    return _.get(slideshows, _.get(this.state, 'id'), _.first(_.values(slideshows)));
+    return _.get(slideshowsByKey, _.get(this.state, 'key'), _.first(slideshows));
   }
 
   render() {
@@ -158,7 +164,7 @@ class Slideshow extends Component {
           <div className='index-buttons'>
             {_.map(slides, (slide, index) => (
               <div
-                key={`${slideshow.id}-${index}`}
+                key={`${slideshow.key}-${index}`}
                 {...className(['index-button', index === this.state.index && 'active'])}
                 onClick={() => this.transitionSlide(() => this.setState({index: index}))}
               />
@@ -182,14 +188,14 @@ class Index extends Component {
       <div {...className(['main-index', this.state.isLoaded && 'is-loaded'])}>
         <Header />
         <div className='slideshows'>
-          {_.map(_.orderBy(_.values(slideshows), 'id', 'desc'), (slideshow, index) => {
+          {_.map(_.reverse([...slideshows]), (slideshow, index) => {
             var mediaUrl = _.get(slideshow, 'slides.0.media.0.src');
 
             return (
               <Link
-                key={slideshow.id}
+                key={slideshow.key}
                 {...className(['slideshow'])}
-                to={`/s/${slideshow.id}/${_.kebabCase(slideshow.title)}`}
+                to={`/${slideshow.key}`}
                 style={{transitionDelay: `${0.5 + 0 * index}s`}}
               >
                 <div className='thumbnail' style={{backgroundImage: `url(${mediaUrl})`}}/>
@@ -209,9 +215,9 @@ export default class App extends Component {
       <BrowserRouter>
         <div className='app'>
           <Switch>
+            <Route path={['/', '']} exact component={Index}/>
             <Route path={['/info']} exact component={InfoPage}/>
-            <Route path={['/s/:id/:slug?']} exact component={Slideshow}/>
-            <Route path={['/', '']} component={Index}/>
+            <Route path={['/:key']} exact component={Slideshow}/>
           </Switch>
         </div>
       </BrowserRouter>

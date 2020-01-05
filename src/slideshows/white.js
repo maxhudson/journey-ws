@@ -1,9 +1,8 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 4,
   title: 'white',
-  author: 'Max',
+  key: 'white',
   path: 'white-art',
   slides: [
     {

@@ -1,8 +1,8 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 7,
   title: 'man',
+  key: 'man',
   path: 'man-made',
   slides: [
     {

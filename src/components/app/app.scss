@@ -227,7 +227,7 @@ $footerHeight: 7.2rem;
         }
       }
     }
-    &.layout-TrMl {
+    &.layout-TrMl, &.layout-Ml {
       flex-flow: row-reverse;
       padding-top: 0;
 
@@ -237,7 +237,7 @@ $footerHeight: 7.2rem;
         }
       }
     }
-    &.layout-TtrMf {
+    &.layout-TtrMf, &.layout-Mf {
       position: relative;
 
       .slide-text {
@@ -260,10 +260,12 @@ $footerHeight: 7.2rem;
         }
       }
     }
-    &.layout-Ml, &.layout-Mr {
+    &.layout-Ml, &.layout-Mr, &.layout-Mf {
       .slide-text {
         display: none;
       }
+    }
+    &.layout-Ml, &.layout-Mr {
       .media {
         width: 70%;
       }

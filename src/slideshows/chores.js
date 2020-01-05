@@ -1,7 +1,6 @@
 // import React from 'react';
 
 var slideshow = {
-  id: 9,
   title: 'chores',
   path: 'chores',
   key: 'chores',
