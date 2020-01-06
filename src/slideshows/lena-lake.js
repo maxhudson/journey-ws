@@ -1,7 +1,7 @@
 // import React from 'react';
 
 var slideshow = {
-  title: 'lena . lake',
+  title: 'lena lake',
   key: 'lena-lake',
   path: 'lena-lake',
   slides: [
