@@ -15,11 +15,11 @@ var slideshow = {
       text: {title: '', body: ``},
       media: [{type: 'image', filename: 'IMG_0193.jpg'}]
     },
-    {
-      layout: 'Mr',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'IMG_0257.jpg'}]
-    },
+    // {
+    //   layout: 'Mr',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'image', filename: 'IMG_0257.jpg'}]
+    // },
     {
       layout: 'Ml',
       text: {title: '', body: ``},

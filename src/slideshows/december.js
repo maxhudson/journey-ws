@@ -38,16 +38,16 @@ But always slowly dripping`},
       text: {title: ``},
       media: [{type: 'image', filename: 'conception.png'}]
     },
-    {
-      layout: 'Ml',
-      text: {title: ``},
-      media: [{type: 'image', filename: 'green-math.png'}]
-    },
-    {
-      layout: 'Mr',
-      text: {title: ``},
-      media: [{type: 'image', filename: 'cacti-02-01.png'}]
-    }
+    // {
+    //   layout: 'Ml',
+    //   text: {title: ``},
+    //   media: [{type: 'image', filename: 'green-math.png'}]
+    // },
+    // {
+    //   layout: 'Mr',
+    //   text: {title: ``},
+    //   media: [{type: 'image', filename: 'cacti-02-01.png'}]
+    // }
   ]
 };
 
