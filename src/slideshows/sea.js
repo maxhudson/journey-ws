@@ -11,8 +11,8 @@ var slideshow = {
       media: [{type: 'image', filename: 'sea-1.jpg'}]
     },
     {
-      layout: 'Mr',
-      text: {title: '', body: ``},
+      layout: 'TlMr',
+      text: {title: '', body: `Every thing in light or darkness`},
       media: [{type: 'image', filename: 'sea-2.jpg'}]
     },
     // {
@@ -20,14 +20,14 @@ var slideshow = {
     //   text: {title: '', body: ``},
     //   media: [{type: 'video', filename: 'sea-3.mp4'}]
     // },
-    // {
-    //   layout: 'Ml',
-    //   text: {title: '', body: ``},
-    //   media: [{type: 'image', filename: 'sea-4.jpg'}]
-    // },
     {
-      layout: 'Ml',
-      text: {title: '', body: ``},
+      layout: 'TrMl',
+      text: {title: '', body: `Once seen, always seen`},
+      media: [{type: 'image', filename: 'sea-4.jpg'}]
+    },
+    {
+      layout: 'TrMl',
+      text: {title: '', body: `If not now, when?`},
       media: [{type: 'image', filename: 'sea-5.jpg'}]
     },
     {
