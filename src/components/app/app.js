@@ -196,7 +196,7 @@ class Index extends Component {
                 key={slideshow.key}
                 {...className(['slideshow'])}
                 to={`/${slideshow.key}`}
-                style={{transitionDelay: `${0.5 + 0 * index}s`}}
+                style={{transitionDelay: `${0.5 + 0.05 * index}s`}}
               >
                 <div className='thumbnail' style={{backgroundImage: `url(${mediaUrl})`}}/>
                 <div className='slideshow-title'>{slideshow.title}</div>
