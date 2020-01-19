@@ -1,5 +1,6 @@
 import {_, Component, React, className} from '@symbolic/react-app'; //eslint-disable-line
 import './app.scss';
+
 import qualities from 'slideshows/qualities';
 import retreat from 'slideshows/retreat';
 import december from 'slideshows/december';
@@ -10,8 +11,8 @@ import tiger from 'slideshows/tiger';
 import chores from 'slideshows/chores';
 import isness from 'slideshows/isness';
 import sea from 'slideshows/sea';
+import orca from 'slideshows/orca';
 
-// import anthony20191125 from 'slideshows/2019-11-25-anthony';
 import yard from 'slideshows/yard';
 import {Link, Switch, BrowserRouter, Route} from 'react-router-dom';
 import Header from 'components/header/header';
@@ -20,7 +21,7 @@ import {Swipeable} from 'react-swipeable';
 
 var slideshows = [
   qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
-  sea
+  sea, orca
 ];
 
 var slideshowsByKey = _.keyBy(slideshows, 'key');
