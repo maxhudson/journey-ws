@@ -11,15 +11,18 @@ var slideshow = {
       media: [{type: 'image', filename: 'orca-1.jpg'}]
     },
     {
-      layout: 'Ml',
-      text: {title: '', body: ``},
+      layout: 'TrMl',
+      text: {title: '', body: `Carbon subtracted
+Light absorbed
+Infinity simplified
+No longer bored`},
       media: [{type: 'image', filename: 'orca-2.jpg'}]
     },
-    {
-      layout: 'Ml',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'orca-3.jpg'}]
-    },
+    // {
+    //   layout: 'Ml',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'image', filename: 'orca-3.jpg'}]
+    // },
     {
       layout: 'Ml',
       text: {title: '', body: ``},
@@ -35,11 +38,11 @@ var slideshow = {
       text: {title: '', body: ``},
       media: [{type: 'image', filename: 'orca-6.jpg'}]
     },
-    {
-      layout: 'Ml',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'orca-7.jpg'}]
-    }
+    // {
+    //   layout: 'Ml',
+    //   text: {title: '', body: ``},
+    //   media: [{type: 'image', filename: 'orca-7.jpg'}]
+    // }
   ]
 };
 
