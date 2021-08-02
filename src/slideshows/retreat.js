@@ -6,17 +6,17 @@ var slideshow = {
   slides: [
     {
       layout: 'TtrMf',
-      text: {title: 'God', body: `God is dead\n Love is real\n Everything is a joke \nand time is the punchline`},
+      text: {title: 'God', body: `God is dead\nLove is real\nEverything is a joke \nand time is the punchline`},
       media: [{type: 'image', filename: '2019-11-28-uptrees-blue.jpg'}]
     },
     {
       layout: 'TrMl',
-      text: {title: 'Personality', body: `Personality inflation - \n Self machination`},
+      text: {title: 'Personality', body: `Personality inflation - \nSelf machination`},
       media: [{type: 'image', filename: '2019-11-28-moss.jpg'}]
     },
     {
       layout: 'TrMl',
-      text: {title: 'Sharp', body: `Sharp blades - \nGears whirring blood`},
+      text: {title: 'Sharp', body: `Sharp blades -\nGears whirring blood`},
       media: [{type: 'image', filename: '2019-11-28-stump.jpg'}]
     },
     {
