@@ -7,7 +7,16 @@ var slideshow = {
   key: title,
   path: title,
   slides: [
-
+    {
+      layout: 'Ml',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'bw-1.jpg'}]
+    },
+    {
+      layout: 'Mr',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'bw-6.jpg'}]
+    },
     {
       layout: 'Ml',
       text: {title: '', body: ``},

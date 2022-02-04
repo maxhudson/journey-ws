@@ -16,11 +16,6 @@ var slideshow = {
       layout: 'Ml',
       text: {title: '', body: ``},
       media: [{type: 'image', filename: 'IMG_6158.jpg'}]
-    },
-    {
-      layout: 'Mr',
-      text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'IMG_6178.jpg'}]
     }
   ]
 };

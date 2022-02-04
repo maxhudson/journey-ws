@@ -30,7 +30,7 @@ import {Swipeable} from 'react-swipeable';
 
 var slideshows = [
   qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
-  sea, orca, canyons, bw, crestoneColorado, flowers, pattern, stone, technicolor //slideshow name
+  sea, orca, crestoneColorado, flowers, pattern, stone, technicolor //slideshow name
 ];
 
 var slideshowsByKey = _.keyBy(slideshows, 'key');
