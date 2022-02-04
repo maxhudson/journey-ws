@@ -14,11 +14,6 @@ var slideshow = {
       layout: 'TlMr',
       text: {title: 'Dishes', body: `Doing someone else's dishes feels better than doing my own.\n\nIf I do someone else's dishes, they might do some of mine.\n\nI can give and get clean dishes - or trudge through my own and avoid others - for the same amount of work.\n\nJust don't expect anything.`},
       media: [{type: 'image', filename: 'chores-2.jpg'}]
-    },
-    {
-      layout: 'TrMl',
-      text: {title: 'The Toilet', body: `Wipe it down every time you use it.`},
-      media: [{type: 'image', filename: 'chores-3.jpg'}]
     }
   ]
 };
