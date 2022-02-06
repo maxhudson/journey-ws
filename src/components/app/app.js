@@ -19,6 +19,16 @@ import technicolor from 'slideshows/technicolor';
 
 import bw from 'slideshows/bw';
 import hue from 'slideshows/hue';
+import life from 'slideshows/life';
+import macroscopic from 'slideshows/macroscopic';
+import mystique from 'slideshows/mystique';
+import plant from 'slideshows/plant';
+import hatch from 'slideshows/hatch';
+import sand from 'slideshows/sand';
+import sky from 'slideshows/sky';
+import vector from 'slideshows/vector';
+import water from 'slideshows/water';
+import watercolor from 'slideshows/watercolor';
 
 import yard from 'slideshows/yard';
 import {Link, Switch, BrowserRouter, Route} from 'react-router-dom';
@@ -27,8 +37,9 @@ import InfoPage from 'components/pages/info/info-page.js';
 import {Swipeable} from 'react-swipeable';
 
 var slideshows = [
-  bw, qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
-  sea, orca, crestoneColorado, pattern, stone, technicolor //slideshow name
+  qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
+  sea, orca, crestoneColorado, pattern, stone, technicolor,
+  bw, hue, life, macroscopic, mystique, hatch, plant, sand, sky, vector, water, watercolor
 ];
 
 var slideshowsByKey = _.keyBy(slideshows, 'key');

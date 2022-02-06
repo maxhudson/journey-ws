@@ -1,25 +1,25 @@
 // import React from 'react';
 
 var slideshow = {
-  title: 'hue',
-  key: 'hue',
-  path: 'hue',
+  title: 'mystique',
+  key: 'mystique',
+  path: 'mystique',
   slides: [
 
     {
       layout: 'Ml',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'IMG_7713.jpeg'}]
+      media: [{type: 'image', filename: 'art003.jpeg'}]
     },
     {
       layout: 'Mr',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'IMG_9505.jpeg'}]
+      media: [{type: 'image', filename: 'art002.jpeg'}]
     },
     {
       layout: 'Ml',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'IMG_9568.jpeg'}]
+      media: [{type: 'image', filename: 'art016.jpeg'}]
     }
   ]
 };
