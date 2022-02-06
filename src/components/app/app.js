@@ -12,15 +12,13 @@ import chores from 'slideshows/chores';
 import isness from 'slideshows/isness';
 import sea from 'slideshows/sea';
 import orca from 'slideshows/orca';
-import bw from 'slideshows/bw';
-import canyons from 'slideshows/canyons';
 import crestoneColorado from 'slideshows/crestone-colorado';
-import flowers from 'slideshows/flowers';
 import pattern from 'slideshows/pattern';
 import stone from 'slideshows/stone';
 import technicolor from 'slideshows/technicolor';
 
-// import name from 'slideshows/title';
+import bw from 'slideshows/bw';
+import hue from 'slideshows/hue';
 
 import yard from 'slideshows/yard';
 import {Link, Switch, BrowserRouter, Route} from 'react-router-dom';
@@ -29,8 +27,8 @@ import InfoPage from 'components/pages/info/info-page.js';
 import {Swipeable} from 'react-swipeable';
 
 var slideshows = [
-  qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
-  sea, orca, crestoneColorado, flowers, pattern, stone, technicolor //slideshow name
+  bw, qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
+  sea, orca, crestoneColorado, pattern, stone, technicolor //slideshow name
 ];
 
 var slideshowsByKey = _.keyBy(slideshows, 'key');

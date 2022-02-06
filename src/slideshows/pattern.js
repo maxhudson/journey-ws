@@ -31,7 +31,12 @@ var slideshow = {
       layout: 'Ml',
       text: {title: '', body: ``},
       media: [{type: 'image', filename: 'IMG_7640.jpg'}]
-    }
+    },
+    {
+      layout: 'Mr',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'color-3.jpg'}]
+    },
   ]
 };
 

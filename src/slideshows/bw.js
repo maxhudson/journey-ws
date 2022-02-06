@@ -9,17 +9,32 @@ var slideshow = {
     {
       layout: 'Ml',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'bw-1.jpg'}]
+      media: [{type: 'image', filename: 'IMG_8581.jpg'}]
     },
     {
       layout: 'Mr',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'bw-2.jpg'}]
+      media: [{type: 'image', filename: 'IMG_5501.jpg'}]
     },
     {
       layout: 'Ml',
       text: {title: '', body: ``},
-      media: [{type: 'image', filename: 'bw-3.jpg'}]
+      media: [{type: 'image', filename: 'IMG_8606.jpg'}]
+    },
+    {
+      layout: 'Ml',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'IMG_8734.jpg'}]
+    },
+    {
+      layout: 'Ml',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'IMG_5384.jpg'}]
+    },
+    {
+      layout: 'Ml',
+      text: {title: '', body: ``},
+      media: [{type: 'image', filename: 'IMG_8536.jpg'}]
     }
   ]
 };
