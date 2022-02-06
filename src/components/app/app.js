@@ -39,7 +39,7 @@ import {Swipeable} from 'react-swipeable';
 var slideshows = [
   qualities, retreat, december, white, yard, lenaLake, man, tiger, chores, isness,
   sea, orca, crestoneColorado, pattern, stone, technicolor,
-  bw, hue, life, macroscopic, mystique, hatch, plant, sand, sky, vector, water, watercolor
+  bw, hue, life, macroscopic, mystique, hatch, watercolor, plant, sand, sky, vector, water
 ];
 
 var slideshowsByKey = _.keyBy(slideshows, 'key');
