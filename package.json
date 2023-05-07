@@ -16,7 +16,7 @@
     "react-scripts": "3.2.0"
   },
   "dependencies": {
-    "@symbolic/lib": "^1.0.5",
+    "@symbolic/lib": "^1.0.144",
     "@symbolic/react-app": "^1.1.0",
     "henrybuilt-js-library": "^1.7.38",
     "henrybuilt-react-library": "^1.0.19",
